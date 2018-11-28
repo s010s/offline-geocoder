@@ -1,10 +1,10 @@
 {
   "name": "offline-geocoder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "src/index.js",
   "dependencies": {
-    "sqlite3": "^3.1.13"
+    "sqlite3": "^4.0.4"
   },
   "devDependencies": {},
   "scripts": {
