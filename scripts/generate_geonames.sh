@@ -7,7 +7,7 @@ OUTPUT="db.sqlite"
 
 if [ ! -f "$DATA" ]; then
   echo "Downloading cities from Geonames..."
-  wget "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/cities1000.zip"
+  wget --no-check-certificate "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/cities1000.zip"
   unzip "cities1000.zip"
   rm "cities1000.zip"
 else
@@ -16,14 +16,14 @@ fi
 
 if [ ! -f "$ADMIN1" ]; then
   echo "Downloading admin1 from Geonames..."
-  wget "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/admin1CodesASCII.txt"
+  wget --no-check-certificate "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/admin1CodesASCII.txt"
 else
   echo "Using existing $ADMIN1"
 fi
 
 if [ ! -f "$COUNTRIES" ]; then
   echo "Downloading countries from Geonames..."
-  wget "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/countryInfo.txt"
+  wget --no-check-certificate "https://onecode-app-bucket-dev.digitalhainan.com.cn/waterbear-analytics/countryInfo.txt"
 else
   echo "Using existing $COUNTRIES"
 fi
